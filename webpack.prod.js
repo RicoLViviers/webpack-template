@@ -1,5 +1,4 @@
 import HtmlWebpackPlugin from "html-webpack-plugin";
-import { watchFile } from "node:fs";
 import path from "node:path";
 
 export default {
@@ -17,7 +16,7 @@ export default {
   plugins: [
     new HtmlWebpackPlugin({
       template: "./src/template.html",
-    })
+    }),
   ],
   module: {
     rules: [
@@ -32,7 +31,7 @@ export default {
       {
         test: /\.(png|.svg|.jpg|jpeg|gif)$/i,
         type: "asset/resource",
-      }
-    ]
-  }
+      },
+    ],
+  },
 };
